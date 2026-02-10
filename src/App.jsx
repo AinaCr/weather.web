@@ -53,9 +53,8 @@ const [dailyIcons, setDailyIcons] = useState({
     d4: ""  
 });
 
-     
-    const ACCESS_KEY="crBpAtEpg5WLmsuwotzEmLACkejDMBaC3_fkz_zxyOw"
-    const WEATHER_API_KEY="78b5bde9a8da9c8715659a2225c231ee"
+const ACCESS_KEY = import.meta.env.VITE_API_KEY
+const WEATHER_API_KEY = import.meta.env.VITE_API_KEY2
     const [temp,setTemp]=useState({
         actualy:"",
         next1:"",
