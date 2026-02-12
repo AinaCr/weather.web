@@ -35,6 +35,8 @@ function App(){
 
     const [idIcone1,setIndexIcone1]=useState("")
 
+    const [erreurC,setErreurC]=useState(false)
+
      const weatherEmojis = {
     '01d': '☀️',   '01n': '🌙',   
     '02d': '🌤️',   '02n': '☁️',   
@@ -219,6 +221,7 @@ useEffect(()=>{
                     getTemp()
                 }else{
                     console.log("erreur ==",data)
+                    setErreurC(true)
                 }
             }catch(err){
                 console.log("erreur==",err)
@@ -253,14 +256,17 @@ useEffect(()=>{
                 const date = new Date(timestamp * 1000);
                 const hours = date.getHours();
                 console.log(hours);
+                setErreurC(false)
 
 
             }else{
                 console.log("erreur ==",data)
+                setErreurC(true)
             }
 
         }catch(err){
             console.log("erreur==",err)
+            setErreurC(true)
         }finally{
             setSpin(false)
             setanswer(true)
@@ -300,7 +306,9 @@ useEffect(()=>{
 
     return (
         <>
-            <div className={css.body}>
+             <div className={css.body}>
+                        
+            
                 <div className={css.boxInput}>
                     <input type="text" className={css.input} value={val} onChange={handleInput} placeholder="City's name"/>
                     <div className={css.iconSearch} onClick={clickWeather}></div>
@@ -309,8 +317,11 @@ useEffect(()=>{
                 {spin && <div>
                                 {!answer &&<Spinner animation="border" variant="primary" />}
                         </div>}
+                {erreurC &&  <div className={css.errMesage}>
+                                        <p>Probleme de connexion ou ville introuvable</p>
+                            </div>}
 
-                {answer && <div className={css.box1}>
+                {! erreurC && answer && <div className={css.box1}>
                     <div className={css.boxDesc1}>
 
                         <div className={css.city}>
@@ -318,13 +329,15 @@ useEffect(()=>{
                             <p className={css.nameCt}>{nameCt}</p>
                         </div>
 
-                        <p style={{fontSize:"20px"}}>Temperature actuelle</p>
+                        <p style={{fontSize:"20px"}} className={css.phrase}>Temperature actuelle</p>
 
-                        <div className={css.boxTemp}>
-                            <p className={css.temp}>{`${temp.actualy}°C`}</p>
+                        <div className={css.boxTemp0}>
+                            <div className={css.boxTemp}>
+                                <p className={css.temp}>{`${temp.actualy}°C`}</p>
+                            </div>
+
+                            <div className={css.iconeWeather}>{weatherEmojis[iconeCurrent]}</div>
                         </div>
-
-                        <div className={css.iconeWeather}>{weatherEmojis[iconeCurrent]}</div>
                     
                     </div>
 
@@ -334,7 +347,7 @@ useEffect(()=>{
                                             <p className={css.sentDesc}>{description}</p>
 
                                         </div>}
-                         <p style={{fontSize:"20px"}}>Temperature des prochaine heures</p>
+                         <p className={css.phrase2} style={{fontSize:"20px"}}>Temperature des prochaine heures</p>
                         
 
                          <Block 
@@ -353,7 +366,7 @@ useEffect(()=>{
                 </div>}
 
 
-                {answer &&<div className={css.box1}>
+                {!erreurC  &&answer &&<div className={css.box1}>
                     <Block2 
                         icone0={weatherEmojis[dailyIcons.d0] || "⌛"}
                         icone1={weatherEmojis[dailyIcons.d1] || "⌛"}
