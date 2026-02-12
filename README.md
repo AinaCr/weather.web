@@ -1,16 +1,42 @@
-# React + Vite
+🌤️ Weather App — Application météo responsive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application météo développée en React permettant d’afficher les conditions météorologiques actuelles ainsi que les prévisions des prochaines heures et des prochains jours pour une ville donnée.
 
-Currently, two official plugins are available:
+L’application met l’accent sur une interface simple, lisible et responsive, adaptée aussi bien aux écrans mobiles qu’aux écrans desktop.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Fonctionnalités
 
-## React Compiler
+🔎 Recherche de ville via un champ de saisie
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌡️ Affichage de la température actuelle
 
-## Expanding the ESLint configuration
+☁️ Description météo (ex : couvert, ensoleillé, pluie…)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⏱️ Prévisions météo des prochaines heures
+
+📅 Prévisions météo sur plusieurs jours
+
+📱 Interface responsive (mobile / tablette / desktop)
+
+🎨 Interface basée sur Flexbox et Grid avec gradients personnalisés
+
+
+🛠️ Technologies utilisées
+
+
+React
+
+JavaScript (ES6+)
+
+CSS (Flexbox & Grid)
+
+API météo (OpenWeather ou équivalent)
+📸 Aperçu de l’application
+
+<img width="390" height="881" alt="Capture d’écran du 2026-02-12 07-44-03" src="https://github.com/user-attachments/assets/6d8354a4-2e6e-4e3a-b010-66da456fea98" /><img width="1671" height="964" alt="Capture d’écran du 2026-02-12 07-42-23" src="https://github.com/user-attachments/assets/d1304be4-5ab5-4d3c-941e-5ee4bbd442e3" />
+
+
+
+
+
+
