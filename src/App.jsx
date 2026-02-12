@@ -310,7 +310,7 @@ useEffect(()=>{
                         
             
                 <div className={css.boxInput}>
-                    <input type="text" className={css.input} value={val} onChange={handleInput} placeholder="City's name"/>
+                    <input type="text" className={css.input} value={val} onChange={handleInput} placeholder="Nom d'une ville"/>
                     <div className={css.iconSearch} onClick={clickWeather}></div>
                 </div>
 
