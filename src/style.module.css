@@ -58,6 +58,7 @@ body {
     width: 100%;
     max-width: 748px;
     min-height: 260px;
+    margin-bottom: 25px;
     
 
     display: flex;
@@ -204,6 +205,8 @@ body {
 
     box-sizing:content-box;
     padding: 5px;
+    max-height: 93px;
+    min-height: 93px;
     
 }
 
@@ -306,12 +309,17 @@ body {
 @media only screen and (min-height: 346px) {
   .body{
     height: auto;
+
+  }
+  .box1{
+    margin-bottom: 25px;
   }
 }
 @media only screen and (min-height: 616px) {
   .body{
-    height: 100vh;
+    height: auto;
   }
+  
 }
 
 
