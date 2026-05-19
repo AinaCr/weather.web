@@ -40,7 +40,7 @@ function App() {
     },[pos])
 
   return (
-    <div className='h-screen w-full bg-blue-500 pt-4 flex items-center justify-around flex-col p-16'>
+    <div className='h-screen w-full bg-blue-500  flex items-center justify-around flex-col p-8'>
 
       <div className='w-full flex flex-row justify-center items-center'>
             <input
