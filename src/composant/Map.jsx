@@ -95,7 +95,7 @@ function ClickMarker() {
 
     <Marker position={position} ref={markerRef}>
 
-        <Popup>
+        <Popup autopanPadding={[10, 10]}>
 
           <div className="bg-slate-900 text-white p-4 rounded-xl min-w-[220px]">
 
@@ -166,7 +166,7 @@ function Map({ pos ,data}) {
     }
   }, []);
 
-  // ✅ Garde HORS du useEffect
+
   if (positionDfault.length === 0 && !pos) return <p>Chargement...</p>;
 
   return (
@@ -179,7 +179,7 @@ function Map({ pos ,data}) {
         attribution='&copy; OpenStreetMap contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* ✅ FlyTo ici, pas dans ClickMarker */}
+
       <FlyTo pos={pos ?? positionDfault} />
 
      {data && pos && (

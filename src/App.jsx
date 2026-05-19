@@ -40,7 +40,7 @@ function App() {
     },[pos])
 
   return (
-    <div className='h-screen w-full bg-blue-500 pt-4 flex items-center justify-around flex-col'>
+    <div className='h-screen w-full bg-blue-500 pt-4 flex items-center justify-around flex-col p-16'>
 
       <div className='w-full flex flex-row justify-center items-center'>
             <input
@@ -59,7 +59,7 @@ function App() {
             </button>
         </div>
 
-        <div className="h-3/4 w-3/4 rounded-lg overflow-hidden">
+        <div className="h-3/4 w-full rounded-lg overflow-hidden">
             <Map pos={pos} data={donne}/>
         </div>
     </div>
